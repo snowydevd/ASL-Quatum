@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+.gradient {
+  background: #c648cf;
+  background: linear-gradient(to top left, #761096 22%, #0c8ecf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: rgb(153, 3, 103);
+  background: linear-gradient(to top left, #761096 22%, #0c8ecf 100%);
+}
+
+.flux-bg {
+  background-image: url("../public/flux.svg");
+  background-position: center;
+}
+
+.ROICounter::after {
+  content: counter(count);
+  animation: counter 2s linear;
+  counter-reset: count 0;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  12.5% {
+    counter-increment: count 10000;
+  }
+  25% {
+    counter-increment: count 50000;
+  }
+  37.5% {
+    counter-increment: count 110000;
+  }
+  50% {
+    counter-increment: count 160000;
+  }
+  62.5% {
+    counter-increment: count 210000;
+  }
+  75% {
+    counter-increment: count 245000;
+  }
+  87.5% {
+    counter-increment: count 260000;
+  }
+  100% {
+    counter-increment: count 270000;
+  }
+}
