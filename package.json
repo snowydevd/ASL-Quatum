@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "@vercel/analytics": "^1.1.2",
     "daisyui": "^4.6.0",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
