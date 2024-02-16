@@ -4,11 +4,17 @@ import React from "react";
 import Counter from "../../Counter/counter";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { PopupButton } from "react-calendly";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function LandingMetrics() {
   return (
-    <section className="w-full flex flex-col justify-center items-center mb-4 mt-4">
+    <motion.section
+      initial={{ opacity: 0, y: -150 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: 0.5, ease: "easeIn" }}
+      className="w-full flex flex-col justify-center items-center mb-4 mt-4"
+    >
       <div className="flex flex-col justify-center items-center ">
         <h2 className="text-md lg:text-2xl font-medium">
           We help businesses escalate their revenue
@@ -53,6 +59,6 @@ export default function LandingMetrics() {
       >
         Schedule a meeting
       </Link>
-    </section>
+    </motion.section>
   );
 }

@@ -3,10 +3,18 @@ import blur from "@/public/blurbg.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 export default function LandingHero() {
   return (
     <section className="h-[40vh] w-full flex justify-center items-center relative">
-      <div className="flex flex-col justify-center items-center text-center lg:p-0 p-4">
+      <motion.div
+        initial={{ opacity: 0, y: -70 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        className="flex flex-col justify-center items-center text-center lg:p-0 p-4"
+      >
         <h1 className="text-2xl font-extrabold leading-none tracking-tight text-zinc-50 md:text-5xl lg:text-6xl ">
           DIGITAL STRATEGIES,{" "}
           <span className="gradient font-extrabold">REAL RESULTS</span>
@@ -24,12 +32,15 @@ export default function LandingHero() {
             More about us
           </Link>
         </div>
-      </div>
-      <Image
-        alt="blue bur behind header"
-        src={blur}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
         className="absolute -z-10 lg:block hidden"
-      />
+      >
+        <Image alt="blue bur behind header" src={blur} className="" />
+      </motion.div>
     </section>
   );
 }

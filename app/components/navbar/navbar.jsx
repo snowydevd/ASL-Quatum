@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import headerLogo from "@/public/A.svg";
+import { motion } from "framer-motion";
 import { IoMenuOutline } from "react-icons/io5";
 
 export default function Navbar() {
@@ -22,17 +24,21 @@ export default function Navbar() {
   return (
     <nav className="w-full flex items-center justify-center top-[0%]">
       <div className="w-full lg:w-3/4 flex justify-between items-center  px-5 lg:px-16 py-5 rounded-xl">
-        <Image
-          alt="ASL quantum logo"
-          src={headerLogo}
-          className="lg:w-16 w-10"
-        />
+        <div className="flex items-center gap-4">
+          <Image
+            alt="ASL quantum logo"
+            src={headerLogo}
+            className="lg:w-8 w-4"
+          />
+          <p className="text-xl">Asl Quantum</p>
+        </div>
+
         <ul className="lg:block hidden">
           {links.map((link) => (
             <li key={link.label} className="inline-block px-4">
               <a
                 href={link.url}
-                className="text-white hover:text-violet-400 font-normal text-sm transition-colors duration-200"
+                className="text-white hover:text-violet-400 font-normal text-md transition-colors duration-200"
               >
                 {link.label}
               </a>

@@ -1,6 +1,7 @@
 "use client";
 import { animate } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function Counter({ from, to }) {
@@ -19,5 +20,12 @@ export default function Counter({ from, to }) {
     return () => controls.stop();
   }, [from, to]);
 
-  return <p ref={nodeRef} />;
+  return (
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      ref={nodeRef}
+    />
+  );
 }

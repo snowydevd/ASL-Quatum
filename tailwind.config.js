@@ -20,5 +20,13 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui"), require("flowbite")],
+  plugins: [
+    require("daisyui"),
+    require("flowbite"),
+    require("@headlessui/tailwindcss"),
+    require("@tailwindcss/forms"),
+    require("flowbite/plugin")({
+      charts: true,
+    }),
+  ],
 };

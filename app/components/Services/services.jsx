@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Iphone from "@/public/iphone.png";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Card from "@/app/components/Card/card";
@@ -61,22 +64,53 @@ export default function ServicesBody() {
     },
   ];
   return (
-    <section className="w-full flex flex-col justify-center items-center mt-32">
-      <div className="w-[68%] flex justify-between items-center">
+    <section className="w-full flex flex-col justify-center items-center mt-32 mb-0">
+      <div className="w-[68%] flex justify-between items-center mb-44">
         <div className="w-2/4 text-left">
-          <h3 className="text-3xl font-extrabold leading-none tracking-tight text-zinc-100 md:text-5xl lg:text-6xl ">
+          <motion.h3
+            initial={{ opacity: 0, y: -70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-3xl font-extrabold leading-none tracking-tight text-zinc-100 md:text-5xl lg:text-6xl "
+          >
             What do we offer?
-          </h3>
-          <p className="w-3/4">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="w-3/4"
+          >
             We offer different digital strategies where we generate recurrent
             monthly flow of meetings.
-          </p>
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <Link
+              href="#program"
+              className="w-fit mt-2 gradient-bg text-whita font-semibold text-white hover:-translate-y-1 duration-200 text-xl rounded-md px-3 py-1 flex items-center justify-center"
+            >
+              Check it out
+            </Link>
+          </motion.div>
         </div>
-        <Image alt="Iphones" src={Iphone} width={700} />
+        <motion.div
+          initial={{ opacity: 0, x: 70 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <Image alt="Iphones" src={Iphone} width={700} />
+        </motion.div>
       </div>
 
-      <div className="w-full bg-zinc-50 flex flex-col justify-center items-center mt-32 py-5">
-        <h3 className="text-black text-4xl lg:text-6xl font-extrabold tracking-tight mb-16">
+      <div
+        id="program"
+        className="w-[1200px]  flex flex-col justify-center items-center mt-32 py-5"
+      >
+        <h3 className="text-4xl lg:text-6xl font-extrabold tracking-tight mb-16">
           OUR PROGRAM
         </h3>
 
@@ -95,7 +129,7 @@ export default function ServicesBody() {
 
         <div className="divider"></div>
 
-        <h3 className="text-black text-4xl lg:text-6xl font-extrabold tracking-tight mb-16 mt-16">
+        <h3 className=" text-4xl lg:text-6xl font-extrabold tracking-tight mb-16 mt-16">
           Additional Services
         </h3>
         <section className=" flex flex-wrap justify-center gap-6">
