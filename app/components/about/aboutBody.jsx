@@ -226,25 +226,25 @@ export default function AboutBody() {
           </section> */}
 
           {/* <Info /> */}
-          <div className="w-full flex flex-col justify-center items-center rounded-xl gap-16 mt-44">
+          <div className="w-full flex flex-col justify-center items-center rounded-xl gap-16 mt-44 px-2">
             {/* PHOLOSOPHY */}
             <motion.section
               initial={{ opacity: 0 }}
               transition={{ delay: 0.5 }}
               whileInView={{ opacity: 1 }}
-              className="w-2/4 py-12 px-6 h-[70vh] rounded-3xl flex flex-col justify-start items-center bg-white shadow-2xl shadow-teal-800 text-black "
+              className="w-full md:w-3/4 lg:w-2/4 py-12 px-6  rounded-3xl flex flex-col justify-start items-center bg-white shadow-2xl shadow-teal-800 text-black "
             >
               <div>
                 <motion.h3
                   initial={{ opacity: 0 }}
                   transition={{ delay: 0.7 }}
                   whileInView={{ opacity: 1 }}
-                  className=" font-normal leading-tight tracking-tight  text-left text-3xl md:text-3xl lg:text-6xl lg:font-bold "
+                  className=" leading-tight tracking-tight text-left text-3xl md:text-3xl lg:text-6xl font-bold "
                 >
                   Our Philosophy
                 </motion.h3>
               </div>
-              <div className="text-xl mt-3 flex flex-col gap-5 text-center">
+              <div className="text-xl mt-3 flex flex-col gap-5 md:text-center text-left">
                 <motion.p
                   initial={{ opacity: 0 }}
                   transition={{ delay: 0.9 }}

@@ -64,9 +64,9 @@ export default function ServicesBody() {
     },
   ];
   return (
-    <section className="w-full flex flex-col justify-center items-center mt-32 mb-0">
-      <div className="w-[68%] flex justify-between items-center mb-44">
-        <div className="w-2/4 text-left">
+    <section className="w-full flex flex-col justify-center items-center mt-32 mb-0 p-2">
+      <div className=" w-full md:w-[68%] flex lg:flex-row flex-col justify-center gap-5 lg:justify-between items-center mb-44 md:text-left text-center">
+        <div className="md:w-3/4 lg:w-2/4 w-full ">
           <motion.h3
             initial={{ opacity: 0, y: -70 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ export default function ServicesBody() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="w-3/4"
+            className="md:w-3/4"
           >
             We offer different digital strategies where we generate recurrent
             monthly flow of meetings.
@@ -88,6 +88,7 @@ export default function ServicesBody() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
+            className="w-full flex justify-center items-center md:justify-start md:items-start"
           >
             <Link
               href="#program"
@@ -108,7 +109,7 @@ export default function ServicesBody() {
 
       <div
         id="program"
-        className="w-[1200px]  flex flex-col justify-center items-center mt-32 py-5"
+        className="w-full lg:w-[1200px]  flex flex-col justify-center items-center mt-32 py-5"
       >
         <h3 className="text-4xl lg:text-6xl font-extrabold tracking-tight mb-16">
           OUR PROGRAM
